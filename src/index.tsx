@@ -2,6 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { MapsApp } from './MapsApp';
 
+if(!navigator.geolocation){
+  alert('Geolocation is not supported.');
+  throw new Error('Geolocation is not supported for your shit!!')
+}
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
