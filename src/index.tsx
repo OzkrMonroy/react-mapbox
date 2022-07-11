@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { MapsApp } from './MapsApp';
+import './index.css'
 
 if(!navigator.geolocation){
   alert('Geolocation is not supported.');
