@@ -35,7 +35,13 @@ export const PlacesProvider = ({ children }: Props) => {
     }, [])
 
     const searchPlacesByTerm = async (query: string): Promise<Feature[]> => {
-        if(query.trim().length === 0) return [];
+        if(query.trim().length === 0) {
+            dispatch({
+                type: 'setPlaces',
+                payload: []
+            })
+            return []
+        }
         if(!state.userLocation) return [];
         
         dispatch({
