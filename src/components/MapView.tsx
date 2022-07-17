@@ -1,4 +1,6 @@
-import { Map } from "mapbox-gl";
+/*eslint import/no-webpack-loader-syntax: off */
+//@ts-ignore
+import { Map } from "!mapbox-gl";
 import { useContext, useEffect, useRef } from "react"
 import { MapContext } from "../context/map";
 import { PlacesContext } from "../context/places"
